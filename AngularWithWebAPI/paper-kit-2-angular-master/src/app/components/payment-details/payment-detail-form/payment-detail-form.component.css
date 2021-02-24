@@ -1,0 +1,6 @@
+.form-group label{color: green;}
+.form-group input{font-weight: 500;}
+.form-group input::placeholder{color: yellowgreen; font-weight: 300;}
+thead th{font-weight: 400; color: tomato;}
+table tbody tr:hover{background-color: lightcoral; cursor: pointer;}
+input.invalid{border-color: rgba(255, 0, 0, 0.904);}

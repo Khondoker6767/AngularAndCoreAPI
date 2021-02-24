@@ -1,0 +1,32 @@
+<div class="jumbotron" py-3>
+    <hr>
+    <br>
+    <h4 class="display-4 text-center" style="border: 2; color:skyblue; background-image: url('./assets/img/CoverKing.jpg');">PAYMENT DETAIL REGISTER</h4>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <app-payment-detail-form></app-payment-detail-form>
+    </div>
+    <div class="col-md-6">
+        <table class="table table-striped">
+            <thead class="thead light">
+                <tr style="font-weight: bold;">
+                    <th>CARD OWNER</th>
+                    <th>CARD NUMBER</th>                    
+                    <th>EXPIRY DATE</th>
+                    <th>REMOVE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pd of service.list">
+                    <td (click)="populateForm(pd)">{{pd.cardOwnerName}}</td>
+                    <td (click)="populateForm(pd)">{{pd.cardNumber}}</td>                   
+                    <td (click)="populateForm(pd)">{{pd.expirationDate}}</td>
+                    <td>
+                        <i class="fas fa-trash text-center text-danger" (click)="onDelete(pd.paymentDetailId)"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
